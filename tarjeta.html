@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago con Tarjeta</title>
+  <link rel="stylesheet" href="./css/pagos.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="header">
+      <h1>Pago con Tarjeta</h1>
+      <p>Ingresa tus datos para completar la transacción.</p>
+    </div>
+    <form class="card" action="#" method="post">
+      <label>Nombre del Titular</label>
+      <input type="text" name="nombre" required />
+
+      <label>Número de Tarjeta</label>
+      <input type="text" name="numero" placeholder="XXXX XXXX XXXX XXXX" required />
+
+      <label>Fecha de Expiración</label>
+      <input type="text" name="expiracion" placeholder="MM/AA" required />
+
+      <label>Código CVV</label>
+      <input type="password" name="cvv" placeholder="123" required />
+
+      <button class="btn btn-primary glow-effect" type="submit">Pagar</button>
+    </form>
+  </main>
+</body>
+</html>

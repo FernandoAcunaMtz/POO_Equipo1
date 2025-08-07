@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos | Cursos Tech Work</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/cursos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                    <img src="./img/logo.png" alt="Logo" class="logo-circular me-2">
+                    <span class="brand-text">Cursos Tech Work</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./cursos.html">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://app.daily.dev/" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        <!-- Nuevo ítem para perfil -->
+                        <!-- Panel Admin (visible solo para administradores) -->
+                        <!-- Panel Admin (visible solo para administradores) -->
+                        <li class="nav-item nav-item-admin" style="display: none;">
+                            <a class="nav-link" href="admin.html">Panel Admin</a>
+                        </li>
+
+                        <!-- Enlace a Perfil (visible para todos los usuarios logueados) -->
+                        <li class="nav-item nav-item-perfil" style="display: none;">
+                            <a class="nav-link" href="perfil.html">Mi Perfil</a>
+                        </li>
+                        <!-- Panel Profesor (Nuevo) -->
+                        <li class="nav-item nav-item-profesor" style="display: none;">
+                            <a class="nav-link" href="profesor.html">Panel Prof</a>
+                        </li>
+                        <!-- Carrito -->
+                        <div class="ms-3 position-relative">
+                            <button class="btn btn-outline-light position-relative" id="btn-carrito">
+                                <i class="bi bi-cart3"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    id="contador">
+                                    0
+                                </span>
+                            </button>
+                            <div id="carrito-lista" class="dropdown-menu dropdown-menu-end p-3"
+                                style="min-width: 250px;">
+                                <p class="text-center fw-bold mb-2">Cursos en el carrito:</p>
+                                <ul class="list-unstyled mb-2" id="carrito-items"></ul>
+                                <div class="d-grid mt-3">
+                                    <a href="./metodopago.html" id="btn-pago" class="btn btn-primary"
+                                        style="display: none;">
+                                        Realizar pago
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                    <!-- Botones de login/cierre de sesión -->
+                    <form class="d-flex">
+                        <button class="btn btn-inicio btn-cerrar-sesion" type="button" style="display: none;">Cerrar
+                            Sesión</button>
+                        <button class="btn btn-inicio btn-iniciar-sesion" type="button">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Inicia contenido-->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="titcursos">
+                    <div class="col-12 text-center" data-aos="fade-right">
+                        <h1 class="titulocurso"> ✴︎ CURSOS ✴︎ </h1>
+                        <hr class="linea-blanca mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Cursos -->
+    <section class="container">
+        <section class="row d-flex align-items-stretch justify-content-center py-4">
+            <!--Tarjeta 1-->
+            <div class="col-lg-3 col-md-4 col-sm-12" data-aos="flip-up">
+                <div class="card h-100 glass-effect text-center p-4 mb-4 h-100">
+                    <img src="./img/uiuxgrained.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollo UI/UX</h5>
+                        <p class="card-text">Aprende los fundamentos del diseño de experiencia de usuario e interfaces
+                        </p>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#modalUIUX">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                id="Layer_1" class="sparkle">
+                                <path
+                                    d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                </path>
+                            </svg>
+                            <span class="text">Saber más</span>
+                            </class=>
+                        </a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPROFESORUIUX">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                id="Layer_1" class="sparkle">
+                                <path
+                                    d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                </path>
+                            </svg>
+                            <span class="text">Profesor</span>
+                            </class=>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Tarjeta 2-->
+            <div class="col-lg-3 col-md-4 col-sm-12" data-aos="flip-up">
+                <div class="card h-100 glass-effect text-center p-4 mb-4 h-100">
+                    <img src="./img/ciberseguridadgrained (1).jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ciberseguridad</h5>
+                        <p class="card-text">Introducción a la seguridad informática y protección de datos</p>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#modalCiber">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                id="Layer_1" class="sparkle">
+                                <path
+                                    d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                </path>
+                            </svg>
+                            <span class="text">Saber más</span>
+                        </a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPROFESORCIBER">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                id="Layer_1" class="sparkle">
+                                <path
+                                    d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                </path>
+                            </svg>
+                            <span class="text">Profesor</span>
+                            </class=>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Tarjeta 3-->
+            <div class="col-lg-3 col-md-4 col-sm-12" data-aos="flip-up">
+                <div class="card h-100 glass-effect text-center p-4 mb-4 h-100">
+                    <img src="./img/iagrained.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Inteligencia artificial para todos</h5>
+                        <p class="card-text">Conceptos básicos de IA y machine learning aplicados</p>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#modalIA">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                id="Layer_1" class="sparkle">
+                                <path
+                                    d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                </path>
+                            </svg>
+                            <span class="text">Saber más</span>
+                        </a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPROFESORIA">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                id="Layer_1" class="sparkle">
+                                <path
+                                    d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                </path>
+                            </svg>
+                            <span class="text">Profesor</span>
+                            </class=>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="my-3"></div>
+        <!--Tarjeta 4-->
+        <section class="container">
+            <section class="row d-flex align-items-stretch justify-content-center py-4">
+                <!--T4-->
+                <div class="col-lg-3 col-md-4 col-sm-12" data-aos="flip-up">
+                    <div class="card h-100 glass-effect text-center p-4 mb-4">
+                        <img src="./img/juegosgrained.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Minijuegos con Python</h5>
+                            <p class="card-text">Crea juegos simples como Pong, adivinanzas o laberintos usando Python
+                                paso
+                                a paso</p>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPY">
+                                <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                    id="Layer_1" class="sparkle">
+                                    <path
+                                        d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Saber más</span>
+                            </a>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPROFESORPY">
+                                <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                    id="Layer_1" class="sparkle">
+                                    <path
+                                        d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Profesor</span>
+                                </class=>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta 5-->
+                <div class="col-lg-3 col-md-4 col-sm-12" data-aos="flip-up">
+                    <div class="card h-100 glass-effect text-center p-4 mb-4">
+                        <img src="./img/sqqq (1).jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fundamentos de Bases de Datos con SQL</h5>
+                            <p class="card-text">Conecta, consulta y administra bases de datos con SQL desde cero usando
+                                MySQL</p>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#modalSQL">
+                                <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                    id="Layer_1" class="sparkle">
+                                    <path
+                                        d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Saber más</span>
+                            </a>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPROFESORSQL">
+                                <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                    id="Layer_1" class="sparkle">
+                                    <path
+                                        d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Profesor</span>
+                                </class=>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta 6-->
+                <div class="col-lg-3 col-md-4 col-sm-12" data-aos="flip-up">
+                    <div class="card h-100 text-center p-4 mb-4">
+                        <img src="./img/piensa_bueno.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Piensa como programador</h5>
+                            <p class="card-text">Curso de lógica para entender cómo se resuelven problemas con código,
+                                sin
+                                fórmulas complicadas.</p>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPIENSA">
+                                <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                    id="Layer_1" class="sparkle">
+                                    <path
+                                        d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Saber más</span></a>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#modalPROFESORPRO">
+                                <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1"
+                                    id="Layer_1" class="sparkle">
+                                    <path
+                                        d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Profesor</span>
+                                </class=>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!-- MODALS -->
+    <!-- Modal UI/UX -->
+    <div class="modal fade" id="modalUIUX" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Desarrollo UI/UX</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <strong>¿De qué trata este curso?</strong><br>
+                    Aprende a diseñar interfaces de usuario atractivas y experiencias de usuario efectivas directamente
+                    desde tu editor de código. Este curso combina teoría del diseño con implementación práctica usando
+                    VS Code, extensiones para diseño y principios de usabilidad aplicables al desarrollo frontend.
+                    <br><br>
+                    <strong>Contenido del curso:</strong><br>
+                    • Semana 1: Fundamentos de UI/UX para desarrolladores<br>
+                    • Semana 2: Herramientas de diseño en VS Code (extensiones, emmet, snippets)<br>
+                    • Semana 3: Prototipado rápido con HTML/CSS en VS Code<br>
+                    • Semana 4: Pruebas de usabilidad y mejora de interfaces<br>
+                    • Semana 5: Integración con herramientas de diseño (Live Server, Prepros)
+                    <br><br>
+                    <strong>¿A quién va dirigido?</strong><br>
+                    A desarrolladores frontend, full-stack o estudiantes que quieran mejorar sus habilidades de diseño
+                    de interfaces directamente en su entorno de desarrollo.
+                    <br><br>
+                    <strong>Requisitos:</strong><br>
+                    • VS Code instalado en tu computadora<br>
+                    • Conocimientos básicos de HTML y CSS<br>
+                    • Acceso a internet<br>
+                    • (Opcional) Extensión "Live Server" para VS Code
+                    <br><br>
+                    <strong>Beneficios adicionales:</strong><br>
+                    • Flujos de trabajo eficientes para diseño y desarrollo<br>
+                    • Integración de herramientas de diseño en tu entorno de codificación<br>
+                    • Desarrollo de interfaces responsivas desde el primer día
+                    </p>
+                    <strong>COSTO:</strong><br>
+                    <p>$899.00 MXN</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="agregarAlCarrito('Desarrollo UI/UX')">Agregar
+                        al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Ciberseguridad -->
+    <div class="modal fade" id="modalCiber" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalCiberLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalCiberLabel">Ciberseguridad</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <strong>¿De qué trata este curso?</strong><br>
+                    Introducción completa a la seguridad informática y protección de datos. Aprenderás los fundamentos
+                    de ciberseguridad, amenazas comunes y las mejores prácticas para proteger sistemas y datos
+                    personales y empresariales.
+                    <br><br>
+                    <strong>Contenido del curso:</strong><br>
+                    • Semana 1: Fundamentos de seguridad informática<br>
+                    • Semana 2: Amenazas digitales y tipos de ataques<br>
+                    • Semana 3: Protección de datos y privacidad<br>
+                    • Semana 4: Seguridad en redes y comunicaciones<br>
+                    • Semana 5: Herramientas básicas de protección
+                    <br><br>
+                    <strong>¿A quién va dirigido?</strong><br>
+                    A cualquier persona interesada en iniciarse en el campo de la ciberseguridad, profesionales de TI
+                    que necesiten reforzar sus conocimientos de seguridad, o usuarios que quieran proteger mejor sus
+                    datos personales.
+                    <br><br>
+                    <strong>Requisitos:</strong><br>
+                    • Computadora con acceso a internet<br>
+                    • Conocimientos básicos de informática<br>
+                    • Interés en aprender sobre seguridad digital
+                    <br><br>
+                    <strong>Beneficios adicionales:</strong><br>
+                    • Certificado de finalización<br>
+                    • Acceso a laboratorios virtuales de práctica<br>
+                    • Guía de herramientas gratuitas de seguridad<br>
+                    • Comunidad de aprendizaje exclusiva
+                    </p>
+                    <strong>COSTO:</strong><br>
+                    <p>$2899.00 MXN</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="agregarAlCarrito('Ciberseguridad')">Agregar
+                        al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal IA -->
+    <div class="modal fade" id="modalIA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalIALabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalIALabel">Inteligencia artificial para todos</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <strong>¿De qué trata este curso?</strong><br>
+                    Descubre los conceptos fundamentales de inteligencia artificial y machine learning de forma
+                    accesible y práctica. Aprenderás cómo funciona la IA, sus aplicaciones cotidianas y cómo
+                    utilizar herramientas básicas sin necesidad de conocimientos técnicos avanzados.
+                    <br><br>
+                    <strong>Contenido del curso:</strong><br>
+                    • Semana 1: Introducción a la IA - Conceptos básicos<br>
+                    • Semana 2: Machine Learning explicado para todos<br>
+                    • Semana 3: Herramientas de IA para uso diario<br>
+                    • Semana 4: Aplicaciones prácticas en diferentes industrias<br>
+                    • Semana 5: Ética y futuro de la inteligencia artificial
+                    <br><br>
+                    <strong>¿A quién va dirigido?</strong><br>
+                    A cualquier persona curiosa sobre inteligencia artificial, emprendedores, profesionales de
+                    todas las áreas que quieran entender cómo aplicar IA en su campo, y estudiantes que buscan
+                    una introducción accesible a este tema.
+                    <br><br>
+                    <strong>Requisitos:</strong><br>
+                    • Computadora o dispositivo móvil con internet<br>
+                    • No se requieren conocimientos previos de programación<br>
+                    • Mentalidad abierta para aprender conceptos nuevos
+                    <br><br>
+                    <strong>Beneficios adicionales:</strong><br>
+                    • Acceso a plataformas de IA gratuitas<br>
+                    • Ejemplos prácticos de aplicaciones reales<br>
+                    • Guía de recursos para seguir aprendiendo<br>
+                    • Certificado de participación al completar el curso
+                    </p>
+                    <strong>COSTO:</strong><br>
+                    <p>$1150.00 MXN</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"
+                        onclick="agregarAlCarrito('Inteligencia artificial para todos')">Agregar
+                        al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Python -->
+    <div class="modal fade" id="modalPY" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPYLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPYLabel">Minijuegos con Python</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <strong>¿De qué trata este curso?</strong><br>
+                    Aprende a programar de forma divertida creando minijuegos clásicos con Python. Desde juegos de
+                    consola simples hasta proyectos gráficos básicos con Pygame, este curso te guiará paso a paso en el
+                    desarrollo de juegos mientras aprendes fundamentos de programación.
+                    <br><br>
+                    <strong>Contenido del curso:</strong><br>
+                    • Semana 1: Introducción a Python para juegos (instalación, sintaxis básica)<br>
+                    • Semana 2: Juegos de texto (adivinanzas, ahorcado, trivia)<br>
+                    • Semana 3: Introducción a Pygame (configuración y conceptos básicos)<br>
+                    • Semana 4: Creación de Pong (gráficos simples y colisiones)<br>
+                    • Semana 5: Juego de laberinto (movimiento, obstáculos y objetivos)
+                    <br><br>
+                    <strong>¿A quién va dirigido?</strong><br>
+                    A principiantes en programación que quieran aprender de forma práctica, estudiantes que buscan
+                    reforzar sus conocimientos de Python, profesores que deseen material didáctico, o cualquier persona
+                    interesada en el desarrollo de juegos simples.
+                    <br><br>
+                    <strong>Requisitos:</strong><br>
+                    • Computadora con Windows, Mac o Linux<br>
+                    • No se requieren conocimientos previos de programación<br>
+                    • Ganas de aprender y divertirse creando juegos
+                    <br><br>
+                    <strong>Beneficios adicionales:</strong><br>
+                    • Acceso a código fuente de todos los juegos<br>
+                    • Guía de recursos para seguir aprendiendo<br>
+                    • Comunidad de estudiantes para compartir proyectos<br>
+                    • Certificado al completar el curso
+                    </p>
+                    <strong>COSTO:</strong><br>
+                    <p>$399.00 MXN</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"
+                        onclick="agregarAlCarrito('Minijuegos con Python')">Agregar
+                        al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal SQL -->
+    <div class="modal fade" id="modalSQL" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalSQLLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalSQLLabel">Fundamentos de Bases de Datos con SQL</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <strong>¿De qué trata este curso?</strong><br>
+                    Domina los conceptos esenciales de las bases de datos relacionales y aprende a trabajar con SQL
+                    usando MySQL. Desde instalación y configuración hasta consultas complejas, este curso te
+                    proporcionará las habilidades fundamentales para interactuar con bases de datos en entornos
+                    profesionales.
+                    <br><br>
+                    <strong>Contenido del curso:</strong><br>
+                    • Semana 1: Introducción a bases de datos y MySQL (instalación y configuración)<br>
+                    • Semana 2: Diseño de bases de datos (modelado ER, normalización)<br>
+                    • Semana 3: Consultas SQL básicas (SELECT, INSERT, UPDATE, DELETE)<br>
+                    • Semana 4: Consultas avanzadas (JOINs, subconsultas, funciones agregadas)<br>
+                    • Semana 5: Administración básica (usuarios, permisos, optimización)
+                    <br><br>
+                    <strong>¿A quién va dirigido?</strong><br>
+                    A principiantes en el mundo de las bases de datos, desarrolladores que necesitan aprender SQL,
+                    analistas de datos, administradores de sistemas que requieren conocimientos básicos de MySQL, y
+                    cualquier profesional que trabaje con información estructurada.
+                    <strong>Requisitos:</strong><br>
+                    • Computadora con Windows, Mac o Linux<br>
+                    • Conexión a internet para descargar software<br>
+                    • No se requieren conocimientos previos de bases de datos<br>
+                    • Conocimientos básicos de informática
+                    <br><br>
+                    <strong>Beneficios adicionales:</strong><br>
+                    • Acceso a scripts SQL de ejemplo y ejercicios prácticos<br>
+                    • Instrucciones detalladas para instalar MySQL en diferentes sistemas operativos<br>
+                    • Casos de estudio con bases de datos reales<br>
+                    • Certificado de finalización al completar el curso<br>
+                    • Guía de recursos para profundizar en temas avanzados
+                    </p>
+                    <strong>COSTO:</strong><br>
+                    <p>$799.00 MXN</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal btn btn-primary"
+                        onclick="agregarAlCarrito('Fundamentos de Bases de Datos con SQL')">Agregar
+                        al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Piensa -->
+    <div class="modal fade" id="modalPIENSA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPIENSALabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPIENSALabel">Piensa como programador</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <strong>¿De qué trata este curso?</strong><br>
+                    Desarrolla el pensamiento lógico y algorítmico esencial para programar, sin enfocarte en un lenguaje
+                    específico. Aprenderás a descomponer problemas, diseñar soluciones eficientes y entender los
+                    conceptos fundamentales que todo programador utiliza, mediante ejercicios prácticos y ejemplos de la
+                    vida real.
+                    <br><br>
+                    <strong>Contenido del curso:</strong><br>
+                    • Semana 1: Fundamentos del pensamiento computacional (descomposición, patrones, abstracción)<br>
+                    • Semana 2: Lógica básica de programación (variables, condicionales, bucles)<br>
+                    • Semana 3: Estructuras de datos simples (listas, diccionarios, conjuntos)<br>
+                    • Semana 4: Algoritmos comunes (búsqueda, ordenamiento, recursión)<br>
+                    • Semana 5: Resolución de problemas complejos (estrategias, debugging, optimización)
+                    <br><br>
+                    <strong>¿A quién va dirigido?</strong><br>
+                    A principiantes absolutos en programación, estudiantes de carreras técnicas, profesionales de otras
+                    áreas que necesitan entender lógica computacional, y cualquier persona interesada en desarrollar
+                    habilidades de resolución de problemas sistemáticos.
+                    <strong>Requisitos:</strong><br>
+                    • No se requiere experiencia previa en programación<br>
+                    • Computadora o tablet para los ejercicios prácticos<br>
+                    • Mentalidad abierta y ganas de aprender<br>
+                    • Conocimientos básicos de operar una computadora
+                    <br><br>
+                    <strong>Beneficios adicionales:</strong><br>
+                    • Ejercicios prácticos basados en situaciones reales<br>
+                    • Acceso a plataforma con simuladores visuales<br>
+                    • Certificado de finalización<br>
+                    • Guía de próximos pasos para aprender a programar<br>
+                    • Comunidad de estudiantes para resolver dudas
+                    </p>
+                    <strong>COSTO:</strong><br>
+                    <p>$199.00 MXN</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"
+                        onclick="agregarAlCarrito('Piensa como programador')">Agregar
+                        al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL PROFESORUIUX-->
+    <div class="modal fade" id="modalPROFESORUIUX" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPRUILabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPROFESORUIUX">👨‍🏫 Profesor del curso UI/UX</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nombre:</strong> María López</p>
+                    <p><strong>Especialidad:</strong> Diseñadora UI/UX Senior con más de 8 años de experiencia en la
+                        industria tecnológica.</p>
+                    <p><strong>Formación Académica:</strong> Licenciatura en Diseño Digital por la Universidad
+                        Iberoamericana. Maestría en Experiencia de Usuario por la Universidad de Barcelona.</p>
+                    <p><strong>Certificaciones:</strong> Google UX Design Certificate, Nielsen Norman Group UX
+                        Certification, Adobe Certified Professional en Adobe XD.</p>
+                    <p><strong>Experiencia Profesional:</strong> Ha colaborado con empresas como IBM, Rappi y Globant,
+                        liderando proyectos de diseño centrado en el usuario para plataformas web y móviles.</p>
+                    <p><strong>Competencias Técnicas:</strong> Dominio avanzado de Figma, Adobe XD, Sketch, InVision y
+                        herramientas de prototipado. Conocimiento profundo en diseño responsivo, diseño accesible (WCAG)
+                        y pruebas de usabilidad.</p>
+                    <p><strong>Habilidades Pedagógicas:</strong> Capacidad comprobada para explicar conceptos complejos
+                        de manera clara y didáctica. Uso de metodologías activas de enseñanza (aprendizaje basado en
+                        proyectos, flipped classroom).</p>
+                    <p><strong>Especialización en UI/UX:</strong> Especializada en arquitectura de la información,
+                        diseño de interacción, desarrollo de prototipos de alta fidelidad y validación de soluciones
+                        mediante pruebas con usuarios reales.</p>
+                    <p><strong>Experiencia Docente:</strong> 4 años impartiendo clases en universidades como CENTRO y
+                        UAM, así como en bootcamps de diseño digital.</p>
+                    <p><strong>Metodologías de Enseñanza:</strong> Integra teoría y práctica con un enfoque en la
+                        resolución de problemas reales, utilizando metodologías ágiles como Design Thinking y Lean UX.
+                    </p>
+                    <p><strong>Adaptabilidad:</strong> Capacidad para actualizar contenidos conforme a tendencias del
+                        diseño digital y adaptar la enseñanza a entornos híbridos y virtuales.</p>
+                    <p><strong></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL PROFESORUIA-->
+    <div class="modal fade" id="modalPROFESORIA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPRIALabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPROFESORIA">👨‍🏫 Profesor del curso Inteligencia artificial
+                        para todos</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nombre:</strong> Oso Polar</p>
+                    <p><strong>Especialidad:</strong> Ingeniero en Inteligencia Artificial con más de 10 años de
+                        experiencia en desarrollo de soluciones basadas en IA.</p>
+                    <p><strong>Formación Académica:</strong> Licenciatura en Ciencias de la Computación por el
+                        Tecnológico de Monterrey. Maestría en Inteligencia Artificial por la Universidad Politécnica de
+                        Cataluña. Doctorado en Ciencia de Datos por la Universidad de Oxford.</p>
+                    <p><strong>Certificaciones:</strong> Deep Learning Specialization (Coursera), Microsoft Certified:
+                        Azure AI Engineer Associate, IBM AI Engineering Certificate.</p>
+                    <p><strong>Experiencia Profesional:</strong> Ha trabajado en empresas como IBM, Oracle y startups de
+                        Silicon Valley, desarrollando modelos predictivos, sistemas de recomendación y soluciones de
+                        procesamiento de lenguaje natural (NLP).</p>
+                    <p><strong>Competencias Técnicas:</strong> Dominio de lenguajes como Python, R y Julia. Experiencia
+                        en frameworks como TensorFlow, PyTorch, Scikit-learn y Keras. Conocimientos avanzados en Machine
+                        Learning, Deep Learning, NLP y visión por computadora.</p>
+                    <p><strong>Habilidades Pedagógicas:</strong> Habilidad para simplificar conceptos técnicos complejos
+                        y transmitirlos de forma clara y estructurada. Uso de estrategias didácticas basadas en
+                        resolución de problemas, simulaciones y proyectos prácticos.</p>
+                    <p><strong>Especialización en IA:</strong> Enfocada en el desarrollo ético y responsable de la
+                        inteligencia artificial, con proyectos de impacto en educación, salud y gobierno digital. Fuerte
+                        conocimiento en IA explicable (XAI) y aprendizaje automático interpretativo.</p>
+                    <p><strong>Experiencia Docente:</strong> Más de 5 años como profesor en universidades como la UNAM
+                        y la Universidad de Buenos Aires, además de instructor en plataformas como edX y Platzi.</p>
+                    <p><strong>Metodologías de Enseñanza:</strong> Enfoque práctico basado en aprendizaje activo, con
+                        proyectos integradores que aplican IA en contextos reales. Aplicación de metodologías ágiles
+                        como CRISP-DM y Scrum para proyectos de datos.</p>
+                    <p><strong>Adaptabilidad:</strong> Actualización constante en avances de IA, implementación de
+                        herramientas emergentes como LLMs (Modelos de Lenguaje Extensos), y uso de entornos virtuales
+                        interactivos para la enseñanza (Google Colab, Jupyter Notebooks).</p>
+                    <p><strong></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL PROFESORCIBER-->
+    <div class="modal fade" id="modalPROFESORCIBER" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPROFESORCIBERLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPROFESORCIBER">👨‍🏫 Profesor del curso Ciberseguridad</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nombre:</strong> Julian Martínez</p>
+                    <p><strong>Especialidad:</strong> Experto en Ciberseguridad y Programación con más de 10 años de
+                        experiencia en desarrollo de software seguro y protección de sistemas informáticos.</p>
+                    <p><strong>Formación Académica:</strong> Ingeniería en Sistemas Computacionales por la Universidad
+                        Nacional Autónoma de México (UNAM). Maestría en Seguridad Informática por la Universidad de
+                        Maryland.</p>
+                    <p><strong>Certificaciones:</strong> Certified Ethical Hacker (CEH), CISSP (Certified Information
+                        Systems Security Professional), CompTIA Security+, Oracle Certified Associate (Java), Python
+                        Institute PCAP.</p>
+                    <p><strong>Experiencia Profesional:</strong> Ha trabajado en empresas como Cisco, Deloitte y
+                        organismos gubernamentales, desarrollando soluciones seguras, aplicando pruebas de penetración,
+                        y liderando proyectos de desarrollo de software y automatización.</p>
+                    <p><strong>Competencias Técnicas:</strong> Dominio en programación con Python, Java, C++ y Bash.
+                        Especialista en análisis de vulnerabilidades, desarrollo seguro, gestión de riesgos,
+                        criptografía, y herramientas como Metasploit, Nessus y Wireshark.</p>
+                    <p><strong>Habilidades Pedagógicas:</strong> Capacidad comprobada para enseñar desde fundamentos de
+                        programación hasta lógica avanzada y prácticas seguras de codificación, mediante laboratorios
+                        interactivos y proyectos reales.</p>
+                    <p><strong>Especialización:</strong> Seguridad en redes y aplicaciones, programación orientada a
+                        objetos, desarrollo de software seguro, pruebas de penetración y scripting para automatización
+                        de tareas en entornos Linux y Windows.</p>
+                    <p><strong>Experiencia Docente:</strong> 6 años como docente en universidades como ITAM y
+                        Universidad Anáhuac, impartiendo cursos de programación, ciberseguridad, algoritmos y desarrollo
+                        de software seguro.</p>
+                    <p><strong>Metodologías de Enseñanza:</strong> Aprendizaje basado en retos, simulaciones de ataques
+                        y defensa, desarrollo de proyectos funcionales, y enseñanza por módulos progresivos desde nivel
+                        básico a avanzado.</p>
+                    <p><strong>Adaptabilidad:</strong> Actualización constante en amenazas y lenguajes de programación,
+                        uso de plataformas educativas modernas, y capacidad para impartir clases en entornos
+                        presenciales, híbridos y en línea.</p>
+                    <p><strong></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL PROFESORPY-->
+    <div class="modal fade" id="modalPROFESORPY" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPROFESORPYLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPROFESORPY">👨‍🏫 Profesor del curso Minijuegos con Python
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nombre:</strong> Pedro Gómez</p>
+                    <p><strong>Especialidad:</strong> Desarrollador Senior en Python con más de 7 años de experiencia
+                        en desarrollo de software y automatización.</p>
+                    <p><strong>Formación Académica:</strong> Ingeniería en Sistemas Computacionales por la Universidad
+                        Autónoma Metropolitana (UAM). Diplomado en Ciencia de Datos y Programación en Python.</p>
+                    <p><strong>Certificaciones:</strong> Python for Everybody (Coursera), Certified Python Developer
+                        (PCAP), Data Science with Python (DataCamp).</p>
+                    <p><strong>Experiencia Profesional:</strong> Ha trabajado en empresas tecnológicas y startups,
+                        desarrollando aplicaciones web, scripts de automatización y soluciones de análisis de datos.</p>
+                    <p><strong>Competencias Técnicas:</strong> Dominio avanzado de Python, bibliotecas como Pandas,
+                        NumPy, Flask, Django, y conocimientos en bases de datos SQL y NoSQL.</p>
+                    <p><strong>Habilidades Pedagógicas:</strong> Capacidad para explicar lógica de programación y
+                        conceptos avanzados de manera clara, con enfoque en aprendizaje práctico y resolución de
+                        problemas.</p>
+                    <p><strong>Especialización en Python:</strong> Desarrollo de aplicaciones backend, automatización de
+                        tareas, análisis y visualización de datos, y programación orientada a objetos.</p>
+                    <p><strong>Experiencia Docente:</strong> 3 años impartiendo cursos en universidades y bootcamps, con
+                        énfasis en programación desde nivel básico hasta avanzado.</p>
+                    <p><strong>Metodologías de Enseñanza:</strong> Uso de proyectos prácticos, pair programming y
+                        evaluación continua para reforzar el aprendizaje efectivo.</p>
+                    <p><strong>Adaptabilidad:</strong> Actualización constante en nuevas versiones y librerías de
+                        Python, y adaptación a formatos presenciales, híbridos y online.</p>
+                    <p><strong></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL PROFESORSQL-->
+    <div class="modal fade" id="modalPROFESORSQL" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPROFESORSQLLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPROFESORSQL">👨‍🏫 Profesor del curso Fundamentos de Bases de
+                        Datos con SQL
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nombre:</strong> Pedro Fernández</p>
+                    <p><strong>Especialidad:</strong> Administrador y desarrollador de Bases de Datos con más de 10 años
+                        de experiencia en diseño, optimización y gestión de sistemas SQL.</p>
+                    <p><strong>Formación Académica:</strong> Ingeniería en Sistemas Computacionales por la Universidad
+                        Nacional Autónoma de México (UNAM). Maestría en Gestión de Tecnologías de la Información.</p>
+                    <p><strong>Certificaciones:</strong> Microsoft Certified: Azure Database Administrator Associate,
+                        Oracle Certified Professional (OCP) en SQL, IBM Certified Database Administrator.</p>
+                    <p><strong>Experiencia Profesional:</strong> Ha trabajado en sectores financiero, telecomunicaciones
+                        y gobierno, liderando proyectos de modelado de datos, optimización de consultas y administración
+                        de bases relacionales.</p>
+                    <p><strong>Competencias Técnicas:</strong> Dominio de SQL Server, Oracle, MySQL, PostgreSQL y
+                        herramientas como SQL Profiler, TOAD y pgAdmin. Experto en diseño de esquemas, normalización,
+                        procedimientos almacenados y triggers.</p>
+                    <p><strong>Habilidades Pedagógicas:</strong> Experiencia en formación técnica con capacidad para
+                        simplificar conceptos complejos y guiar a estudiantes en prácticas reales y proyectos
+                        integradores.</p>
+                    <p><strong>Especialización en SQL:</strong> Diseño y administración de bases de datos relacionales,
+                        optimización de consultas, implementación de seguridad y backup, y desarrollo de scripts para
+                        automatización.</p>
+                    <p><strong>Experiencia Docente:</strong> 7 años impartiendo clases en universidades y cursos
+                        corporativos, así como tutorías personalizadas para certificaciones en SQL.</p>
+                    <p><strong>Metodologías de Enseñanza:</strong> Uso de casos prácticos, simulaciones y laboratorios
+                        de base de datos para integrar teoría y práctica de forma efectiva.</p>
+                    <p><strong>Adaptabilidad:</strong> Actualización constante con nuevas versiones de sistemas gestores
+                        de bases de datos y herramientas de administración, adaptando la enseñanza a modalidades
+                        presenciales y en línea.</p>
+                    <p><strong></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL PROFESORPRO-->
+    <div class="modal fade" id="modalPROFESORPRO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPROFESORPROLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPROFESORPRO">👨‍🏫 Profesor del curso Piensa como programador
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nombre:</strong> Julian Martínez</p>
+                    <p><strong>Especialidad:</strong> Experto en Ciberseguridad y Programación con más de 10 años de
+                        experiencia en desarrollo de software seguro y protección de sistemas informáticos.</p>
+                    <p><strong>Formación Académica:</strong> Ingeniería en Sistemas Computacionales por la Universidad
+                        Nacional Autónoma de México (UNAM). Maestría en Seguridad Informática por la Universidad de
+                        Maryland.</p>
+                    <p><strong>Certificaciones:</strong> Certified Ethical Hacker (CEH), CISSP (Certified Information
+                        Systems Security Professional), CompTIA Security+, Oracle Certified Associate (Java), Python
+                        Institute PCAP.</p>
+                    <p><strong>Experiencia Profesional:</strong> Ha trabajado en empresas como Cisco, Deloitte y
+                        organismos gubernamentales, desarrollando soluciones seguras, aplicando pruebas de penetración,
+                        y liderando proyectos de desarrollo de software y automatización.</p>
+                    <p><strong>Competencias Técnicas:</strong> Dominio en programación con Python, Java, C++ y Bash.
+                        Especialista en análisis de vulnerabilidades, desarrollo seguro, gestión de riesgos,
+                        criptografía, y herramientas como Metasploit, Nessus y Wireshark.</p>
+                    <p><strong>Habilidades Pedagógicas:</strong> Capacidad comprobada para enseñar desde fundamentos de
+                        programación hasta lógica avanzada y prácticas seguras de codificación, mediante laboratorios
+                        interactivos y proyectos reales.</p>
+                    <p><strong>Especialización:</strong> Seguridad en redes y aplicaciones, programación orientada a
+                        objetos, desarrollo de software seguro, pruebas de penetración y scripting para automatización
+                        de tareas en entornos Linux y Windows.</p>
+                    <p><strong>Experiencia Docente:</strong> 6 años como docente en universidades como ITAM y
+                        Universidad Anáhuac, impartiendo cursos de programación, ciberseguridad, algoritmos y desarrollo
+                        de software seguro.</p>
+                    <p><strong>Metodologías de Enseñanza:</strong> Aprendizaje basado en retos, simulaciones de ataques
+                        y defensa, desarrollo de proyectos funcionales, y enseñanza por módulos progresivos desde nivel
+                        básico a avanzado.</p>
+                    <p><strong>Adaptabilidad:</strong> Actualización constante en amenazas y lenguajes de programación,
+                        uso de plataformas educativas modernas, y capacidad para impartir clases en entornos
+                        presenciales, híbridos y en línea.</p>
+                    <p><strong></strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <section>
+        <footer class="footer footer-negro">
+            <p>© 2025 Cursos Tech Work. Todos los derechos reservados.</p>
+        </footer>
+    </section>
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/tilina_script.js"></script>
+    <!-- ...existing code... -->
+    <script>
+        // Lista de cursos y sus precios
+        const cursos = {
+            'Desarrollo UI/UX': 899,
+            'Ciberseguridad': 2899,
+            'Inteligencia artificial para todos': 1150,
+            'Minijuegos con Python': 399,
+            'Fundamentos de Bases de Datos con SQL': 799,
+            'Piensa como programador': 199
+        };
+
+        let carrito = [];
+        let total = 0;
+
+        // Actualiza el carrito visualmente
+        function actualizarCarrito() {
+            const carritoItems = document.getElementById('carrito-items');
+            const contador = document.getElementById('contador');
+            const btnPago = document.getElementById('btn-pago');
+            carritoItems.innerHTML = '';
+            total = 0;
+
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} - $${item.precio}.00 MXN`;
+                carritoItems.appendChild(li);
+                total += item.precio;
+            });
+
+            // Mostrar total
+            if (carrito.length > 0) {
+                const totalLi = document.createElement('li');
+                totalLi.className = 'fw-bold mt-2';
+                totalLi.textContent = `Total: $${total}.00 MXN`;
+                carritoItems.appendChild(totalLi);
+                btnPago.style.display = 'block';
+            } else {
+                btnPago.style.display = 'none';
+            }
+
+            contador.textContent = carrito.length;
+        }
+
+        // Función para agregar al carrito
+        function agregarAlCarrito(nombreCurso) {
+            if (cursos[nombreCurso]) {
+                carrito.push({ nombre: nombreCurso, precio: cursos[nombreCurso] });
+                actualizarCarrito();
+                // Mostrar el carrito al usuario (opcional)
+                document.getElementById('carrito-lista').classList.add('show');
+            }
+        }
+
+        // Mostrar/ocultar el carrito al hacer clic en el botón del carrito
+        document.getElementById('btn-carrito').addEventListener('click', function () {
+            document.getElementById('carrito-lista').classList.toggle('show');
+        });
+
+        // Cierra el carrito si se hace clic fuera (opcional)
+        document.addEventListener('click', function (event) {
+            const carritoLista = document.getElementById('carrito-lista');
+            const btnCarrito = document.getElementById('btn-carrito');
+            if (!carritoLista.contains(event.target) && !btnCarrito.contains(event.target)) {
+                carritoLista.classList.remove('show');
+            }
+        });
+        // ...existing code...
+        document.getElementById('btn-pago').addEventListener('click', function () {
+            localStorage.setItem('totalPagar', total);
+            window.location.href = 'metodopago.html';
+        });
+        // ...existing code...
+    </script>
+    <!-- ...existing code... -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/tilina_script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
+    <script>
+        // Inicializar tilt.js en todas las tarjetas con data-tilt
+        $(document).ready(function () {
+            $('.card[data-tilt]').tilt({
+                scale: 1.02,  // Reducido de 1.03
+                glare: true,
+                maxGlare: 0.1,  // Reducido de 0.2
+                maxTilt: 8,    // Reducido de 15
+                speed: 400,    // Reducido de 500
+                transition: true
+            });
+        });
+
+    </script>
+</body>
+
+</html>

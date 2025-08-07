@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profesor | Cursos Tech Work</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/profesor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                    <img src="./img/logo.png" alt="Logo" class="logo-circular me-2">
+                    <span class="brand-text">Cursos Tech Work</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./cursos.html">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://app.daily.dev/" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        <!-- Panel Admin (visible solo para administradores) -->
+                        <li class="nav-item nav-item-admin" style="display: none;">
+                            <a class="nav-link" href="admin.html">Panel Admin</a>
+                        </li>
+
+                        <!-- Enlace a Perfil (visible para todos los usuarios logueados) -->
+                        <li class="nav-item nav-item-perfil" style="display: none;">
+                            <a class="nav-link" href="perfil.html">Mi Perfil</a>
+                        </li>
+                        <!-- Panel Profesor (Nuevo) -->
+                        <li class="nav-item nav-item-profesor" style="display: none;">
+                            <a class="nav-link" href="profesor.html">Panel Prof</a>
+                        </li>
+                        <!-- Carrito -->
+                        <div class="ms-3 position-relative">
+                            <button class="btn btn-outline-light position-relative" id="btn-carrito">
+                                <i class="bi bi-cart3"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    id="contador">
+                                    0
+                                </span>
+                            </button>
+                            <div id="carrito-lista" class="dropdown-menu dropdown-menu-end p-3"
+                                style="min-width: 250px;">
+                                <p class="text-center fw-bold mb-2">Cursos en el carrito:</p>
+                                <ul class="list-unstyled mb-2" id="carrito-items"></ul>
+                                <div class="d-grid mt-3">
+                                    <a href="./metodopago.html" id="btn-pago" class="btn btn-primary"
+                                        style="display: none;">
+                                        Realizar pago
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-inicio" type="button" onclick="window.location.href='login.html'">Cerrar
+                            Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="container mt-5">
+            <h2 class="mb-4">Grupos y Alumnos</h2>
+            <div class="container mt-5">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Alumno</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ciberseguridad</td>
+                            <td>Frida Sofía Escamilla Olguín</td>
+                            <td>sofiaescamilla@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Piensa como programador</td>
+                            <td>Pamela Ruíz Velasco</td>
+                            <td>pamelaruiz@gmail.com</td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <section>
+        <footer class="footer footer-negro">
+            <p>© 2025 Cursos Tech Work. Todos los derechos reservados.</p>
+        </footer>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/profesor.js"></script>
+</body>
+
+</html>

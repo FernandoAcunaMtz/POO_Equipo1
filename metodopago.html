@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos de Pago</title>
+  <link rel="stylesheet" href="./css/pagos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="./cursos.html" class="back-button">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+  <div class="container">
+    <div id="payment-methods">
+      <h1>Método de pago</h1>
+
+      <h2>Mis tarjetas</h2>
+      <ul class="card-list" id="card-list">
+        <li class="card-item add-card" id="add-card-btn">Agregar una tarjeta de crédito o débito</li>
+      </ul>
+
+      <h2>Total a Pagar:</h2>
+          <strong>AQUI VA LA CANTIDAD TOTAL DE LOS CURSOS</strong><br>
+
+      <h2>Tu saldo disponible</h2>
+      <h3>Ingresa un código de tarjeta de regalo o de promoción</h3>
+      <div class="gift-card-form">
+        <input type="text" placeholder="Introducir código">
+        <button>Aplicar</button>
+      </div>
+
+    </div>
+
+    <div id="add-card-form" class="card-form">
+      <h1>Agregar una tarjeta de crédito o débito</h1>
+
+      <div class="form-group">
+        <label for="card-number">Número de tarjeta</label>
+        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+      </div>
+
+      <div class="form-group">
+        <label for="card-name">Nombre en la tarjeta</label>
+        <input type="text" id="card-name" placeholder="Como aparece en la tarjeta">
+      </div>
+
+      <div style="display: flex; gap: 1rem;">
+        <div class="form-group" style="flex: 1;">
+          <label for="expiry-date">Fecha de vencimiento</label>
+          <input type="text" id="expiry-date" placeholder="MM/AA">
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label for="security-code">Código de Seguridad</label>
+          <input type="text" id="security-code" placeholder="CVV" maxlength="4">
+        </div>
+      </div>
+
+      <div class="card-logos">
+        <div class="card-logo">VISA</div>
+        <div class="card-logo">Mastercard</div>
+        <div class="card-logo">AMEX</div>
+        <div class="card-logo">Otra</div>
+      </div>
+
+      <div class="default-payment">
+        <input type="checkbox" id="default-payment">
+        <label for="default-payment">Usar como mi pago predeterminado</label>
+      </div>
+
+      <div class="form-actions">
+        <button class="submit-btn" id="save-card-btn">Agregar tarjeta</button>
+        <button class="submit-btn" id="cancel-card-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/scrpit.js"></script>
+  <script>
+  // Al cargar la página, muestra el total guardado
+  document.addEventListener('DOMContentLoaded', function () {
+    const total = localStorage.getItem('totalPagar') || 0;
+    document.querySelector('h2 + strong').textContent = `$${total}.00 MXN`;
+  });
+</script>
+</body>
+
+</html>

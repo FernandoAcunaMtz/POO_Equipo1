@@ -1,0 +1,481 @@
+/*
+  VARIABLES DE TEMA (Gradientes, Colores, Sombra)
+*/
+:root {
+    --primary-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
+    /* Gradiente principal */
+    --secondary-gradient: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    /* Gradiente secundario */
+    --accent-gradient: linear-gradient(135deg, #f857a6, #ff5858);
+    /* Gradiente de acento */
+    --dark-bg: #0a0a1a;
+    /* Fondo oscuro */
+    --light-bg: rgba(255, 255, 255, 0.1);
+    /* Fondo translúcido claro */
+    --text-primary: #ffffff;
+    /* Texto principal */
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    /* Texto secundario */
+    --glow: 0 0 15px rgba(167, 119, 227, 0.5);
+    /* Efecto glow */
+}
+
+/* ESTILO BASE DEL BODY CON FONDO Y TIPOGRAFÍA */
+body {
+    background: 
+      url('../img/66666.png')  
+      var(--dark-bg);
+      background-position: cover cover, center center;
+      color: #ffffff;
+      background-repeat: no-repeat;
+      background-size: cover, 1600px 2600px, auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.texto2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+
+.linea-blanca {
+    border: none;
+    border-top: 2px solid #ffffff;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+/*
+  NAVBAR PRINCIPAL CON EFECTO VIDRIO
+*/
+.navbar {
+    background: rgba(10, 10, 26, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 6.5rem;
+}
+
+/* Estilo al hacer scroll */
+.navbar.scrolled {
+    background: rgba(10, 10, 26, 0.98);
+    padding: 0.5rem 0;
+}
+
+/*
+  LOGO DE LA NAVBAR CON GRADIENTE
+*/
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Estilo circular para el logo */
+.logo-circular {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*
+  MENÚ DE NAVEGACIÓN
+*/
+.nav-item {
+    margin: 0 0.5rem;
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8) !important;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white !important;
+}
+
+/* Subrayado al pasar el mouse */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/*
+  BOTONES DE INICIO Y REGISTRO
+*/
+.btn-registro,
+.btn-inicio {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    margin-left: 0.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-registro {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+}
+
+.btn-registro:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+}
+
+.btn-inicio {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-inicio:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+  ICONO DEL TOGGLER PARA MÓVILES
+*/
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/*
+  CONTENIDO PRINCIPAL
+*/
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 9rem;
+}
+
+.btn-inscr,
+.btn-curso {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    margin-left: 0.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-inscr {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+}
+
+.btn-inscr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+}
+
+.btn-curso {
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+}
+
+.btn-curso:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+}
+
+/*
+  ESTILOS RESPONSIVOS PARA MENÚ Y BOTONES
+*/
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(10, 10, 26, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .btn-registro,
+    .btn-inicio {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+}
+
+/*
+  CONTENEDOR GENERAL DE SECCIONES
+*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/*
+  CABECERA CON TÍTULO PRINCIPAL Y DESCRIPCIÓN
+*/
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+/*
+  TARJETAS DE INFORMACIÓN
+*/
+.card .card-text,
+.card .bi,
+.card .btn {
+    color: white !important;
+}
+
+.card-title.tc {
+    padding: 1rem;
+    color: #ffffff !important;
+}
+
+.card {
+    background: var(--light-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--glow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.card img {
+    border-radius: 16px;
+    /* O usa 'inherit' si quieres que copie el del .card */
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Si deseas mantener proporciones */
+}
+
+.titulo-cursos {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+/*
+  ESTILOS DE BOTÓN GENERAL Y VARIANTES
+*/
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(110, 142, 251, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+  TEXTO DESTACADO CON GRADIENTE DE ACENTO
+*/
+.highlight-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 1.5rem 0;
+}
+
+/*
+  GRID DE CARACTERÍSTICAS (Features)
+*/
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-item {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/*
+  PIE DE PÁGINA
+*/
+.footer {
+    background: rgba(10, 10, 26, 0.9);
+    /* Mismo fondo que el navbar */
+    backdrop-filter: blur(10px);
+    /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px);
+    /* Efecto de desenfoque para navegadores WebKit */
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra similar al navbar */
+}
+
+.footer-negro {
+    color: white;
+    /* Cambia el color del texto a blanco para que sea visible */
+}
+
+/*
+  EFECTO GLOW PARA ELEMENTOS
+*/
+.glow-effect {
+    position: relative;
+}
+
+.glow-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: var(--primary-gradient);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.glow-effect:hover::after {
+    opacity: 0.3;
+    filter: blur(20px);
+}

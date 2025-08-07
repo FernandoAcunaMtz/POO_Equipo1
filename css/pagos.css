@@ -1,0 +1,513 @@
+/*
+  VARIABLES DE TEMA MEJORADAS (Gradientes, Colores, Sombra)
+*/
+:root {
+  --primary-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
+  --secondary-gradient: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  --accent-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
+  --dark-bg: #0a0a1a;
+  --darker-bg: #060612;
+  --light-bg: rgba(255, 255, 255, 0.08);
+  --lighter-bg: rgba(255, 255, 255, 0.15);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --glow: 0 0 20px #8187f395;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ESTILO BASE MEJORADO */
+body {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(110, 142, 251, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(248, 87, 166, 0.15) 0%, transparent 30%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" opacity="0.03"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>'),
+    var(--dark-bg);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CONTENEDOR PRINCIPAL MEJORADO */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: rgba(10, 10, 26, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-md), var(--glow);
+  transition: var(--transition);
+}
+
+.container:hover {
+  box-shadow: var(--shadow-md), var(--glow-hover);
+}
+
+/* ESTILOS PARA LOS TÍTULOS MEJORADOS */
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--primary-gradient);
+}
+
+h2 {
+  color: #ffffff; /* Color blanco sólido */
+  background: none !important; /* Elimina el gradiente */
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* LISTAS DE TARJETAS Y MÉTODOS DE PAGO MEJORADOS */
+.card-list, .payment-methods {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-item, .method-item {
+  padding: 1.5rem;
+  background: var(--light-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.card-item:hover, .method-item:hover {
+  transform: translateY(-3px);
+  background: var(--lighter-bg);
+  box-shadow: var(--glow-hover);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* BOTONES PARA AGREGAR MEJORADOS */
+.add-card, .add-voucher {
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+  background: rgba(110, 142, 251, 0.1);
+  border: 1px dashed rgba(110, 142, 251, 0.4);
+  padding: 1.25rem 1.5rem;
+}
+
+.add-card:hover, .add-voucher:hover {
+  background: rgba(110, 142, 251, 0.2);
+  border-color: rgba(110, 142, 251, 0.8);
+  border-style: solid;
+}
+
+.add-card::after, .add-voucher::after {
+  content: "+";
+  font-size: 1.75rem;
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.add-card:hover::after, .add-voucher:hover::after {
+  transform: scale(1.2);
+}
+
+/* MÉTODOS DE PAGO ESPECÍFICOS MEJORADOS */
+.cash-method, .kueski-method {
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+}
+
+.cash-method:hover, .kueski-method:hover {
+  background: rgba(0, 210, 255, 0.15);
+  border-color: rgba(0, 210, 255, 0.4);
+}
+
+.cash-method strong, .kueski-method strong {
+  background: var(--secondary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* FORMULARIO DE TARJETA DE REGALO MEJORADO */
+.gift-card-form {
+  display: flex;
+  margin-top: 1.25rem;
+  gap: 1rem;
+}
+
+.gift-card-form input {
+  flex: 1;
+  padding: 0.9rem 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.gift-card-form input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.gift-card-form input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #6e8efb;
+  box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+}
+
+.gift-card-form button {
+  padding: 0.9rem 1.75rem;
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  color: white;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gift-card-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px #6e8ffb92;
+}
+
+/* FORMULARIO DE AGREGAR TARJETA MEJORADO */
+.card-form {
+  display: none;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(20, 20, 40, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-sm), var(--glow);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  flex: 1;
+  width: 100%;
+  text-align: left; /* Texto dentro del input a la derecha */
+  padding: 0.9rem 0.1rem;
+  padding-left: 0.3rem; /* Espacio interno derecho */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #6e8efb;
+  box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+}
+
+/* LOGOS DE TARJETAS MEJORADOS */
+.card-logos {
+  display: flex;
+  margin: 1.75rem 0;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card-logo {
+  padding: 0.6rem 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.card-logo:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* CHECKBOX DE PAGO PREDETERMINADO MEJORADO */
+.default-payment {
+  display: flex;
+  align-items: center;
+  margin-top: 1.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.default-payment input {
+  margin-right: 0.75rem;
+  width: 18px;
+  height: 18px;
+  accent-color: #6e8efb;
+  cursor: pointer;
+}
+
+/* BOTONES DEL FORMULARIO MEJORADOS */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.25rem;
+}
+
+.submit-btn {
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#save-card-btn {
+  background: var(--primary-gradient);
+  color: white;
+  flex: 1;
+}
+
+#save-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(110, 142, 251, 0.4);
+}
+
+#cancel-card-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#cancel-card-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* TARJETAS GUARDADAS MEJORADAS */
+.saved-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.card-icon {
+  font-size: 2.25rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-name {
+  font-weight: 500;
+}
+
+.card-number {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.checkmark {
+  color: #4caf50;
+  font-size: 1.5rem;
+}
+
+.remove-card-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.remove-card-btn:hover {
+  color: #8187f3;
+  background: #8187f399;
+  transform: rotate(90deg);
+}
+
+/* EFECTOS DE HOVER Y FOCUS MEJORADOS */
+button, input[type="checkbox"], .card-logo, .card-item, .method-item {
+  transition: var(--transition);
+}
+
+button:active {
+  transform: scale(0.98) !important;
+}
+
+/* RESPONSIVE MEJORADO */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1.75rem;
+    border-radius: var(--border-radius-md);
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .gift-card-form, .form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .submit-btn, .gift-card-form button, .gift-card-form input {
+    width: 100%;
+  }
+  
+  .card-info {
+    gap: 0.75rem;
+  }
+  
+  .card-icon {
+    font-size: 1.75rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ANIMACIONES ADICIONALES */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse-effect {
+  animation: pulse 2s infinite;
+}
+
+/* SCROLLBAR PERSONALIZADA */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#6e8efb, #a777e3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#5d7de0, #9666d6);
+}
